@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 修改为100vh，使高度与视口一致 */
+	width: 80vh;
+    margin: 2px;
+    overflow-y: hidden; /* 隐藏垂直方向溢出 */
+    background-color: #f0f0f0;
+}
+
+#calendar {
+    width: 550px; /* Increased width for better layout */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#monthYear {
+    font-size: 2em; /* Reduced font size */
+	padding: 8px 12px;
+	
+}
+
+#goToday {
+    font-size: 18px;
+    padding: 8px 12px;
+    /* margin-left: 10px; /* 增加左侧间距 */ */
+}
+
+#prevMonth {
+    font-size: 18px;
+    padding: 8px 12px;
+    /* margin-left: 10px; /* 增加左侧间距 */ */
+}
+
+#nextMonth {
+    font-size: 18px;
+    padding: 8px 12px;
+    /* margin-left: 10px; /* 增加左侧间距 */ */
+}
+
+#dates {
+    display: grid;
+    grid-template-columns: repeat(7, 0.1fr);
+    gap: 10px; /* 调整为更小的间距，比如2px */
+}
+
+span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 60px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+	/* margin: -1px; /* 添加间距 */ */
+	
+}
+
+.day-number {
+    font-weight: bold;
+	font-size: 1.5em;
+}
+
+.event-text {
+    font-size: 1em;
+    color: #55aaff; /* Text color */
+    background-color: transparent; /* Remove background color */
+    padding: 2px;
+    border-radius: 3px;
+    width: 100%; /* Make event text fill the width */
+    text-align: center;
+}
+
+.selected {
+    background-color: green;
+    color: white; /* Optionally change text color for better visibility */
+}
+
+
+#weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 0.1fr);
+    gap: 10px; /* 调整为更小的间距，比如2px */
+	font-weight: bold; /* 添加字体加粗 */
+}
+
+#currentTime {
+    font-size: 2em; /* Adjusted font size */
+    font-weight: bold;
+    color: black;
+    /* background-color: blue; */
+    padding: 19px 12px;
+    /* border-radius: 5px; */
+}
+
+.today {
+    background-color: yellow;
+    color: black;
+}
+
+.inactive {
+    color: gray;
+}
